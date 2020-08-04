@@ -117,10 +117,10 @@ app.put('/:id', (req, res) => {
 app.post('/', (req, res) => {
     var body = req.body;
     var tarea = new Tarea({
-        tarea: body.responsable,
-        tarea: body.prioridad,
-        tarea: body.completada,
-        tarea: body.etiquetas
+        responsable: body.responsable,
+        prioridad: body.prioridad,
+        completada: body.completada,
+        etiquetas: body.etiquetas
     });
 
     tarea.save((err, tareaGuardada) => {
